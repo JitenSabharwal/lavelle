@@ -31,7 +31,7 @@ $(document).ready(function(){
 	//refreshing div
 	setInterval(function(){
 		loadlink();
-	},5000);
+	},30000);
 
 	$(".register").bind('click',function(){
 		var url=$(this).data("value");
