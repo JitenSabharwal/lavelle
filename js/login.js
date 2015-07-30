@@ -29,10 +29,7 @@ $(document).ready(function(){
 		console.clear();
 	});
 	//refreshing div
-	setInterval(function(){
-		loadlink();
-	},30000);
-
+	
 	$(".register").bind('click',function(){
 		var url=$(this).data("value");
 		window.open("../functions/"+url,"_self");
@@ -168,3 +165,4 @@ $(".adduser").on('click',function(e){
 	$("#modal2").openModal();
 	$('#search').val("");
 });
+
