@@ -17,16 +17,21 @@ $(document).ready(function(){
 	$(".linkout").bind('click',function(){
           logout();
     });   
-
+	//search
+	      $("#search").autocomplete({
+	             source:'search/getautocomplete.php',
+                 minLength:2
+                    });
+  //reload
 	$(".reload").on('click',function(){
 		loadlink();
 		console.log("wor");
 		console.clear();
 	});
-
+	//refreshing div
 	setInterval(function(){
 		loadlink();
-	},100000);
+	},5000);
 
 	$(".register").bind('click',function(){
 		var url=$(this).data("value");
@@ -151,4 +156,15 @@ function logout()
  }
 $('.addresume').on('click',function(){
 		 window.open("resume/index.php");
+});
+
+$(".adduser").on('click',function(e){
+	var a=$(this).data("value");
+	var user=$("#search").val();
+	console.clear();
+	e.preventDefault();
+	console.log(a+"?frnd="+user);
+	$("#modal2").load(a+"?frnd="+user);
+	$("#modal2").openModal();
+	$('#search').val("");
 });

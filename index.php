@@ -13,7 +13,9 @@ session_start();
 	
 	<div class="main">	
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		 <nav>
+		  <link rel="stylesheet" type="text/css"
+        href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
+ <nav>
 			    <div class="nav-wrapper">
 				
 				      <a href="#!" class="brand-logo">&nbsp;<?php if(isset($_SESSION['username']))echo $_SESSION['username'];else header("location:login/login_index.php")?></a>
@@ -25,16 +27,17 @@ session_start();
 					</ul>
 
 				      <ul class="right hide-on-med-and-down">
-			        	<li style="margin-right:300px;">
+			        	<li style="">
 				        	
 						        <form >
 							        <div class="input-field" >
-								         <input id="search" type="search" style="width:400px" required>
-								         <label for="search"><i class="material-icons">search</i></label>
-							        </div>
+								                <input id="search" type="search" style="width:400px" required>
+										         <label for="search"><i class="material-icons">search</i></label>
+									</div>
 							      </form>
-					  		
+														  		
 				 		 </li>
+				 		 <li style=""><a class="adduser" data-value="addfriend/sendreq.php" href="#"><i  class="material-icons ">recent_actors</i></a></li>
 				        <li><a class="addresume  modal-trigger" data-value="resume/upload.php" href="#"><i class="material-icons">add</i></a></li>
 				        <li><a class="men_link" data-value="skills/skill.php" href="#"><i class="material-icons">view_module</i></a></li>
 				        <li><a class="reload" href="#"><i class="material-icons">refresh</i></a></li>
@@ -69,6 +72,16 @@ session_start();
 	    <div class="modal-footer">
 	      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat mclose">Agree</a>
 	    </div>
+  </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+	    <div id="loadhere">
+	    </div>	    
+	    <div class="modal-footer">
+	      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat mclose">Agree</a>
+	    </div>
+  </div>
+  </div>
   </div>	
 	</body>
 </html>

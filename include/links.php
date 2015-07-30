@@ -11,3 +11,4 @@
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="../js/typeahead.min.js"></script>

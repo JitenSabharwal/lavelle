@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 30, 2015 at 11:03 AM
+-- Generation Time: Jul 30, 2015 at 03:27 PM
 -- Server version: 5.6.14
 -- PHP Version: 5.5.6
 
@@ -36,13 +36,6 @@ CREATE TABLE IF NOT EXISTS `comment` (
   PRIMARY KEY (`Sno`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `comment`
---
-
-INSERT INTO `comment` (`Sno`, `comid`, `comment`, `postid`, `username`, `timestamp`) VALUES
-(1, 'COM00001', 'fdfds', 'POST00013', 'Jiten  Sabharwal', '2015-07-30 08:13:36');
-
 -- --------------------------------------------------------
 
 --
@@ -72,23 +65,14 @@ CREATE TABLE IF NOT EXISTS `post` (
   `downvote` int(10) DEFAULT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`Sno`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
 
 --
 -- Dumping data for table `post`
 --
 
 INSERT INTO `post` (`Sno`, `postid`, `user`, `post`, `upvote`, `downvote`, `timestamp`) VALUES
-(4, 'POST00004', 'jitensabharwal08@gmail.com', 'hello', 4, 1, '2015-07-28 11:28:45'),
-(5, 'POST00005', 'jitensabharwal08@gmail.com', 'hello', 0, 0, '2015-07-28 11:29:41'),
-(6, 'POST00006', 'jitensabharwal08@gmail.com', 'hrerbfb', 0, 0, '2015-07-28 11:30:43'),
-(7, 'POST00007', 'jitensabharwal08@gmail.com', 'heiii', 1, 2, '2015-07-28 12:08:18'),
-(8, 'POST00008', 'jitensabharwal08@gmail.com', 'hello', 2, 2, '2015-07-28 12:08:53'),
-(23, 'POST00009', 'jitensabharwal08@gmail.com', 'my name is sheela sheela ki jawani ', 2, 2, '2015-07-28 17:05:35'),
-(24, 'POST00010', 'jitensabharwal08@gmail.com', 'baaba is my name i love to suck my boobs', 0, 1, '2015-07-28 17:06:41'),
-(25, 'POST00011', 'jitensabharwal08@gmail.com', 'Fuck Chammo Fuck\n', 8, 0, '2015-07-28 17:07:13'),
-(26, 'POST00012', 'jitensabharwal08@gmail.com', 'hi', 0, 0, '2015-07-30 04:01:27'),
-(27, 'POST00013', 'jitensabharwal08@gmail.com', 'jlfs;lsdf', 13, 5, '2015-07-30 05:39:25');
+(28, 'POST00001', 'jitensabharwal08@gmail.com', 'hi my name is jiten', 0, 0, '2015-07-30 13:26:16');
 
 -- --------------------------------------------------------
 
@@ -128,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `salt` varchar(50) DEFAULT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`Sno`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `users`
