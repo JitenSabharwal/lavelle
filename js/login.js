@@ -1,3 +1,4 @@
+var ruser;
 $(document).ready(function(){
 	
 	$(window).load(function(){
@@ -109,7 +110,8 @@ function login(user, pass)
 	xml.send(str);
 	switch(xml.responseText.trim())
 	{
-		case "Yes" : 	window.open("../index.php","_self");
+		case "Yes" : 	ruser=user;
+						window.open("../index.php","_self");
 							break;
 		case "No"  :	alert("Enter corect Username and Password");
 							break;
@@ -148,5 +150,5 @@ function logout()
           return false;
  }
 $('.addresume').on('click',function(){
-		 //var a=$(this).data("value");
+		 window.open("resume/index.php");
 });

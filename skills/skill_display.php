@@ -8,7 +8,6 @@
 	$id3 = $data [$head][0]["project"];
 	$id4 = $data [$head][0]["project_Details"];
 	require_once("../include/links.php");
-
 ?>
 
 <html>
@@ -19,7 +18,7 @@
 		console.clear();
 	</script>
 	<body>
-		<h3>Check the view</h3>
+		<h3>My skills</h3>
 		<div class="row">
 			    <div class="col s12">
 			        <ul class="tabs" tabs>
@@ -73,10 +72,14 @@
 			    	<?php
 			    	$rules=explode(",",$id2[0]);
 			    	$c=count($rules);
+			    	if(file_exists("../resume/uploads/".$_SESSION['sess_user'].".pdf"))
+			    			echo "<tr><td><li><a href=resume/uploads/".$_SESSION['sess_user'].".pdf download>".$_SESSION['sess_user']."Resume</li></td></tr>";
+			    		
 			    	for($i=0;$i<$c-1;$i++)
 			    	{
 			    		echo "<tr><td><li>".$rules[$i]."</li></td></tr>";
 			    	}
+			    		
 			    	?>
 			    </table>
 			    </div>
